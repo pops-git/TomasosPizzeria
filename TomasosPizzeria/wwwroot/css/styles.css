@@ -1,0 +1,124 @@
+﻿/*_layout design*/
+._layoutcontainer {
+    display: flex;
+    justify-content: center;
+}
+.logincontainer{
+    display: flex;
+    width: 18rem;
+    flex-direction: column;
+    margin-top: 10%;
+}
+.logincontainer form {
+    margin-top: 1rem;
+}
+.logincontainer .row {
+    display: block;
+    vertical-align: baseline;
+    float: right;
+    margin-right: auto;
+    margin-top: 1rem;
+}
+.logincontainer .rowbutton {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-top: 1rem;
+}
+.logincontainer .row label {
+    width: 6rem;
+}
+.logincontainer .row + .logincontainer .row {
+    margin-top: 0.5rem;
+}
+
+/*edituser admin*/
+.outer-edit-container {
+    display: flex;
+    justify-content: center;
+}
+.edit-container {
+    display: flex;
+    width: 18rem;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+.edit-container form {
+    margin-top: 1rem;
+}
+.edit-container .row {
+    display: block;
+    vertical-align: baseline;
+    float: left;
+    margin-right: auto;
+}
+.edit-container .rowbutton {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 1rem;
+}
+.edit-container .row label {
+    width: 6rem;
+}
+.edit-container .row + .edit-container .row {
+    margin-top: 0.5rem;
+}
+
+/*header, navbar & body design*/
+.header {
+    display: flex;
+    align-items: center;
+    font-family: cursive;
+    background-color: ghostwhite;
+}
+.header img{
+    width: 9rem;
+    height: 9rem;
+    margin: 0.5rem;
+}
+li{
+    margin-left: 1.8rem;
+    margin-right: 1.8rem;
+}
+body{
+    background-color: ghostwhite;
+}
+.basket{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.checkout-sum{
+    display: flex;
+    justify-content: center;
+}
+.checkout-button{
+    display: flex;
+    justify-content: center;
+}
+
+/*table design*/
+table {
+    min-width: 25rem;
+    margin: auto;
+}
+
+/*Card design*/
+.card {
+    width: 18rem;
+    min-height: 25rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+/*General*/
+p {
+    font-weight: bold;
+}
+h6 {
+    font-weight: normal;
+}
+span.field-validation-error {
+    color: red;
+}

@@ -1,0 +1,117 @@
+﻿@model TomasosPizzeria.ViewModels.LoginViewModel
+
+<div class="logincontainer">
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" id="login-tab" data-toggle="tab" href="#login" role="tab" aria-controls="login" aria-selected="true">Login</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="register-tab" data-toggle="tab" href="#register" role="tab" aria-controls="register" aria-selected="false">Register</a>
+        </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
+            <form asp-controller="Account" asp-action="Login" method="post">
+
+                <div class="row">
+                    <span asp-validation-for="@Model.LoginUser.Username"></span>
+                </div>
+                <div class="row">
+                    <label asp-for="@Model.LoginUser.Username"></label>
+                    <input type="text" asp-for="@Model.LoginUser.Username" autofocus="autofocus" />
+                </div>
+
+                <div class="row">
+                    <span asp-validation-for="@Model.LoginUser.Password"></span>
+                </div>
+                <div class="row">
+                    <label asp-for="@Model.LoginUser.Password"></label>
+                    <input type="password" asp-for="@Model.LoginUser.Password" />
+                </div>
+
+                <div class="row rowbutton">
+                    <input type="submit" class="btn btn-outline-primary" value="Login" />
+                </div>
+
+                <div class="row">
+                    <p class="text-center">@TempData["error"]</p>
+                </div>
+                
+            </form>
+        </div>
+
+
+        <div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="register-tab">
+            <form asp-controller="Account" asp-action="Register" method="post">
+
+                <div class="row">
+                    <span asp-validation-for="@Model.User.Username"></span>
+                </div>
+                <div class="row">
+                    <label asp-for="@Model.User.Username"></label>
+                    <input type="text" asp-for="@Model.User.Username" autofocus="autofocus" />
+                </div>
+
+                <div class="row">
+                    <span asp-validation-for="@Model.User.Email"></span>
+                </div>
+                <div class="row">
+                    <label asp-for="@Model.User.Email"></label>
+                    <input type="text" asp-for="@Model.User.Email" />
+                </div>
+
+                <div class="row">
+                    <span asp-validation-for="@Model.User.Password"></span>
+                </div>
+                <div class="row">
+                    <label asp-for="@Model.User.Password"></label>
+                    <input type="password" asp-for="@Model.User.Password" />
+                </div>
+
+                <div class="row">
+                    <span asp-validation-for="@Model.User.Gatuadress"></span>
+                </div>
+                <div class="row">
+                    <label asp-for="@Model.User.Gatuadress"></label>
+                    <input type="text" asp-for="@Model.User.Gatuadress" />
+                </div>
+
+                <div class="row">
+                    <span asp-validation-for="@Model.User.Namn"></span>
+                </div>
+                <div class="row">
+                    <label asp-for="@Model.User.Namn"></label>
+                    <input type="text" asp-for="@Model.User.Namn" />
+                </div>
+
+                <div class="row">
+                    <span asp-validation-for="@Model.User.Postnr"></span>
+                </div>
+                <div class="row">
+                    <label asp-for="@Model.User.Postnr"></label>
+                    <input type="text" asp-for="@Model.User.Postnr" />
+                </div>
+
+                <div class="row">
+                    <span asp-validation-for="@Model.User.Postort"></span>
+                </div>
+                <div class="row">
+                    <label asp-for="@Model.User.Postort"></label>
+                    <input type="text" asp-for="@Model.User.Postort" />
+                </div>
+
+                <div class="row">
+                    <span asp-validation-for="@Model.User.Phone"></span>
+                </div>
+                <div class="row">
+                    <label asp-for="@Model.User.Phone"></label>
+                    <input type="text" asp-for="@Model.User.Phone" />                    
+                </div>
+
+                <div class="row rowbutton">
+                    <input type="submit" class="btn btn-outline-primary" value="Create Account" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

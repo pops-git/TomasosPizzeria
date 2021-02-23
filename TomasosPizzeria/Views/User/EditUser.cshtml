@@ -1,0 +1,60 @@
+﻿@model TomasosPizzeria.ViewModels.UpdateUserViewModel
+<div class="outer-edit-container">
+    <div class="edit-container">
+        <form asp-controller="User" asp-action="UpdateUser" method="post">
+            <div class="row">
+                <span asp-validation-for="Email"></span>
+            </div>
+            <div class="row">
+                <label asp-for="Email"></label>
+                <input type="text" asp-for="Email" />                
+            </div>
+
+            <div class="row">
+                <span asp-validation-for="Gatuadress"></span>
+            </div>
+            <div class="row">
+                <label asp-for="Gatuadress"></label>
+                <input type="text" asp-for="Gatuadress" />                
+            </div>
+
+            <div class="row">
+                <span asp-validation-for="Namn"></span>
+            </div>
+            <div class="row">
+                <label asp-for="Namn"></label>
+                <input type="text" asp-for="Namn" />                
+            </div>
+
+            <div class="row">
+                <span asp-validation-for="Postnr"></span>
+            </div>
+            <div class="row">
+                <label asp-for="Postnr"></label>
+                <input type="text" asp-for="Postnr" />                
+            </div>
+
+            <div class="row">
+                <span asp-validation-for="Postort"></span>
+            </div>
+            <div class="row">
+                <label asp-for="Postort"></label>
+                <input type="text" asp-for="Postort" />                
+            </div>
+
+            <div class="row">
+                <span asp-validation-for="Phone"></span>
+            </div>
+            <div class="row">
+                <label asp-for="Phone"></label>
+                <input type="text" asp-for="Phone" />                
+            </div>
+
+            <div class="row rowbutton">
+                <input type="submit" class="btn btn-outline-success" value="Save" />
+            </div>
+
+            <p class="text-center">@TempData["save"]</p>
+        </form>
+    </div>
+</div>

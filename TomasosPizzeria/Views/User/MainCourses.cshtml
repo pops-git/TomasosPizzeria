@@ -1,0 +1,54 @@
+﻿@model TomasosPizzeria.ViewModels.MainCoursesViewModel
+
+<div class="container">
+    <div class="row hidden-md-up">
+        @foreach (var course in Model.Courses)
+        {
+            <div class="col-md-4">
+                <div class="card">
+                    @if (course.MatrattNamn == "Calzone")
+                    {
+                        <img class="card-img-top" src="/img/calzone.jpg" alt="Card image cap">
+                    }
+                    else if (course.MatrattNamn == "Tonfisksallad")
+                    {
+                        <img class="card-img-top" src="/img/tonfisksallad.jpg" alt="Card image cap">
+                    }
+                    else if (course.MatrattNamn == "Ost & skink sallad")
+                    {
+                        <img class="card-img-top" src="/img/ostskinksallad.jpg" alt="Card image cap">
+                    }
+                    else if (course.MatrattNamn == "Carbonara")
+                    {
+                        <img class="card-img-top" src="/img/carbonara.jpg" alt="Card image cap">
+                    }
+                    else if (course.MatrattNamn == "Vesuvio")
+                    {
+                        <img class="card-img-top" src="/img/vesuvio.jpg" alt="Card image cap">
+                    }
+                    else
+                    {
+                        <img class="card-img-top" src="/img/food.jpg" alt="Card image cap">
+                    }
+                    <div class="card-body">
+                        <h4 class="card-title">@course.MatrattNamn</h4>
+                        <h6 class="card-text">
+                            @foreach (var ingredient in course.MatrattProdukts)
+                            {
+                                @(ingredient.Produkt.ProduktNamn + " ")
+                            }
+                        </h6>
+                        
+                    </div>
+                    <div class="card-footer">
+                        <a class="btn btn-secondary" asp-controller="User"
+                           asp-action="BuyCourse"
+                           asp-route-id="@course.MatrattId">
+                            @("(" + course.Pris + " SEK) Buy")
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

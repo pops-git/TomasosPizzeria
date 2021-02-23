@@ -1,0 +1,53 @@
+﻿@model TomasosPizzeria.ViewModels.MainCoursesViewModel
+
+
+<div class="outer-edit-container">
+    <div class="edit-container">
+        <form asp-controller="Admin" asp-action="AddNewCourse" method="post">
+
+            <div class="row">
+                <span asp-validation-for="@Model.CurrentCourse.MatrattNamn"></span>
+            </div>
+            <div class="row">
+                <label>Name</label>
+                <input type="text" asp-for="@Model.CurrentCourse.MatrattNamn" />
+            </div>
+
+            <div class="row">
+                <span asp-validation-for="@Model.CurrentCourse.Beskrivning"></span>
+            </div>
+            <div class="row">
+                <label>Info</label>
+                <input type="text" asp-for="@Model.CurrentCourse.Beskrivning" />                
+            </div>
+
+            <div class="row">
+                <span asp-validation-for="@Model.CurrentCourse.Pris"></span>
+            </div>
+            <div class="row">
+                <label>Price</label>
+                <input type="text" asp-for="@Model.CurrentCourse.Pris" />                
+            </div>
+
+            <div class="row">
+                @for (int i = 0; i < Model.Ingredients.Count; i++)
+                {
+                    <input type="checkbox" asp-for="@Model.Ingredients[i].IsChecked" />@Model.Ingredients[i].ProduktNamn
+                    <input type="hidden" asp-for="@Model.Ingredients[i].ProduktNamn" />
+                    <br />
+                    <input type="hidden" asp-for="@Model.Ingredients[i].ProduktId" />
+                }
+            </div>
+
+            <div class="row">
+                <select asp-for="@Model.CurrentCourse.MatrattTyp.MatrattTypId"
+                        asp-items="@Model.SelectListCourseTypes">
+                </select>
+                <input type="submit" class="btn btn-outline-success" value="Save" />
+            </div>
+            <p class="text-center">@TempData["error"]</p>
+            <p class="text-center">@TempData["save"]</p>
+
+        </form>
+    </div>
+</div>

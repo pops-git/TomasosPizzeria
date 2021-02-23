@@ -1,0 +1,21 @@
+﻿@model TomasosPizzeria.ViewModels.MainCoursesViewModel
+
+<div class="outer-edit-container">
+    <div class="edit-container">
+        <form asp-controller="Admin" asp-action="EditIngredient" method="post">
+
+            <div class="row">
+                <span asp-validation-for="@Model.CurrentProduct.ProduktNamn"></span>
+            </div>
+            <div class="row">
+                <label asp-for="@Model.CurrentProduct.ProduktNamn"></label>
+                <input type="text" asp-for="@Model.CurrentProduct.ProduktNamn" value="@Model.CurrentProduct.ProduktNamn" />                
+                <input type="hidden" asp-for="@Model.CurrentProduct.ProduktId" />
+            </div>
+
+            <div class="row">
+                <input type="submit" class="btn btn-outline-success" value="Save" />
+            </div>
+        </form>
+    </div>
+</div>

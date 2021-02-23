@@ -1,0 +1,14 @@
+﻿@model TomasosPizzeria.ViewModels.CreateRoleViewModel
+
+
+<h1>User Registration</h1>
+
+<form asp-controller="Administration" asp-action="CreateRole" method="post">
+
+    <label asp-for="RoleName"></label>
+    <input type="text" asp-for="RoleName" />
+    <span asp-validation-for="RoleName"></span>
+
+    <button type="submit">Create Role</button>
+
+</form>
