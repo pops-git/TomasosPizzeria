@@ -14,15 +14,12 @@ namespace TomasosPizzeria.Controllers
     [Authorize(Roles = "Admin")]
     public class AdminController : Controller
     {
-        private SignInManager<ApplicationUser> _signinmanager;
         private UserManager<ApplicationUser> _usermanager;
         private TomasosContext _context;
-        public AdminController(SignInManager<ApplicationUser> signinmanager,
-                                UserManager<ApplicationUser> usermanager,
+        public AdminController(UserManager<ApplicationUser> usermanager,
                                 TomasosContext context)
         {
             _usermanager = usermanager;
-            _signinmanager = signinmanager;
             _context = context;
         }
         public IActionResult AdminMain()
