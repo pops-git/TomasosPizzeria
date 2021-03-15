@@ -9,10 +9,13 @@ Difference between regular and premium is that premium has discounts (10pts per 
 You can try the following logins if you wish:
 
 Username: regular
+
 Password: Regular123!
 
 Username: premium
+
 Password: Premium123!
 
 Username: admin
+
 Password: Admin123!
