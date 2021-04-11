@@ -6,4 +6,5 @@ Menu from a regular users view
 
 
 Settings from admin view
+
 ![screenshot](https://github.com/pops-git/TomasosPizzeria/blob/master/Images/Admin-Edits.jpg)
