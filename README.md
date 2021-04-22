@@ -2,7 +2,8 @@
 School project where I had to create a website for a pizzeria. Includes interface for customers and admin. I built this using ASP.NET Core MVC and SQL Server.
 
 Menu from a regular users view
-![screenshot](https://github.com/pops-git/TomasosPizzeria/blob/master/Images/Menu.png)
+
+<img src="https://github.com/pops-git/TomasosPizzeria/blob/master/Images/Menu.png" alt="Menu" width="600" height="440">
 
 
 # Prerequisites
@@ -13,7 +14,7 @@ You will need:
 * Visual Studio
 
 
-#Getting started
+# Getting started
 ---
 
 1. Clone Repository
