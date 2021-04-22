@@ -18,7 +18,7 @@ You will need:
 
 1. Clone Repository
 2. Run tomasos_script.sql in SSMS. Make sure you have the correct path in the script, depending on where you have SSMS installed.
-3. Run IIS Express or press F5. <img src="https://github.com/pops-git/TomasosPizzeria/blob/master/Images/IIS.png" alt="Menu">
+3. Run IIS Express <img src="https://github.com/pops-git/TomasosPizzeria/blob/master/Images/IIS.png" alt="Menu"> (or press F5) 
 
 User logins to try:
 * **Regular User** Username: *regular* | Password: *Regular123!*
